@@ -8,6 +8,11 @@ double function(double x)
     return 4040.0 * (sqrt(pow(x,11.0) + 1) - 1) / pow(x,11.0);
 }
 
+double function_better(double x)
+{
+    return 4040 * (1/(sqrt(pow(x,11.0) + 1) + 1));
+}
+
 double function2(double x)
 {
     return 12120 * (x-sin(x))/pow(x,3);
@@ -55,7 +60,8 @@ double function5(int n)
 
 int main()
 {
-    cout << function(0.001) << endl;
+    cout << function(0.01) << endl;
+    cout << function_better(0.001) << endl;
     cout << function2(pow(10,-20)) << endl;
     function3(30);
     function4(20);
