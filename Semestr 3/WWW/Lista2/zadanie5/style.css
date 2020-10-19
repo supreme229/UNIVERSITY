@@ -1,0 +1,76 @@
+.head{
+    background-color:blue;
+    font-size: xx-large;
+    height: 50px;
+}
+
+.title{
+color: white;
+margin-left: 10px;
+display: block;
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.nav1{
+    background-color: darkred;
+    text-align: center;
+    font-size: x-large;
+    color:white;
+    width: 10%;
+    height: 750px;
+    float: left;
+}
+
+.main1{
+    float:left;
+    width: 80%;
+    height: 750px;
+    background-color: cornsilk;
+}
+
+.objects{
+    position: relative;
+    left: 50px;
+}
+
+.name{
+    position: relative;
+    top:10px;
+    left:50px
+}
+
+
+.perfume_photo{
+    display: block;
+    position: relative;
+    float: left;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.object_title{
+    color: black;
+    font-size: xx-large;
+}
+
+.object_description{
+    position: relative;
+    left: 5%;
+    font-size: x-large;
+    color: crimson;
+    width: 90%;
+}
+
+.object{
+    margin-top: 40px;
+    width: 90%;
+    height: 35%;
+    background-color: cyan;
+}
+
+.price{
+    position: relative;
+    float: left;
+}
