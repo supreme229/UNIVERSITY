@@ -1,0 +1,39 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+form {
+    background-color: rgb(203, 204, 120);
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 320px;
+}
+
+label {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+input {
+    margin-bottom: 15px;
+    width: 140px;
+    background-color: #CCCCFF;
+    font-size: 1.2rem;
+    min-height: 25px;
+    min-width: 250px;
+    border: 2px solid #F0F0F5;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 40px;
+}
+
+#blad {
+    color: "#FF4D64";
+}

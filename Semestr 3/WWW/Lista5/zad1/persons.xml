@@ -1,0 +1,14 @@
+<persons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persons.xsd">
+    <person>
+        <acc_nr>12345678901</acc_nr>
+        <pesel>10332852379</pesel>
+        <date_of_birth>28-12-2020</date_of_birth>
+        <e-mail>example@onet.pl</e-mail>
+    </person>
+    <person>
+        <acc_nr>12325678901</acc_nr>
+        <pesel>10335852379</pesel>
+        <date_of_birth>21-12-2020</date_of_birth>
+        <e-mail>exampee@onet.pl</e-mail>
+    </person>
+</persons>

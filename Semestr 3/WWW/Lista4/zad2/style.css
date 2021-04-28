@@ -1,0 +1,17 @@
+tr,
+td {
+    vertical-align: top;
+    text-align: left;
+}
+
+table {
+    float: left;
+}
+
+button {
+    margin: 20px;
+}
+
+input{
+    width:400px;
+}

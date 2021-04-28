@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="persons">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="person" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="acc_nr">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="([0-9]{11}|[0-9]{2}-[0-9]{3}-[0-9]{6})"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="pesel">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]{11}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="date_of_birth">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string"></xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="e-mail">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

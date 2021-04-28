@@ -1,0 +1,3 @@
+about informuje nas o technologii wykorzystywanej w folderze którym pracujemy.
+
+router:match - jest to przydatne do debugowania problemów z routingiem i ustalenia, która trasa jest powiązana z danym adresem URL

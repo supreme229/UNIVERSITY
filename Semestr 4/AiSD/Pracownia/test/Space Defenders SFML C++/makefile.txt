@@ -1,0 +1,1 @@
+g++ *.cpp -o -lsfml-graphics -lsfml-window -lsfml-system ./space-defenders

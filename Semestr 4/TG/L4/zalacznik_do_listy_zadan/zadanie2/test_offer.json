@@ -1,0 +1,26 @@
+{
+  "jersey dress": {
+    "description":  "Calf-length dress in soft viscose jersey. Short sleeves, seam at waist, and softly draped, gently flared skirt. Unlined.",
+    "price":  39.99
+  },
+  "denim shorts": {
+    "description":  "Short, 5-pocket shorts in washed denim with a high waist, button fly, and raw-edge hems.",
+    "price":  19.99
+  },
+  "denim skirt": {
+    "description":  "Short skirt in washed cotton denim. High waist, zip fly with button, front and back pockets, and raw-edge hem.",
+    "price":  19.99
+  },
+  "sneakers": {
+    "description":  "Sneakers with lacing at front and lightly padded edge and tongue. Mesh lining and fabric insoles.",
+    "price":  29.99
+  },
+  "t-shirt": {
+    "description":  "Fitted T-shirt in soft jersey.",
+    "price":  4.99
+  },
+  "sunglasses": {
+    "description":  "Sunglasses with metal frames and UV-protective, tinted lenses.",
+    "price":  14.99
+  }
+}

@@ -1,0 +1,50 @@
+﻿1.    11    Killian PEIER            SUI           231.5 m      235.0 m        433.8
+2.    16    Domen PREVC              SLO           232.5 m      228.0 m        426.6
+3.    4     Andrzej STEKALA          POL           226.0 m      230.0 m        424.2
+4.    32    Karl GEIGER              GER           229.0 m      229.5 m        423.2
+5.    3     Stefan KRAFT             AUT           231.0 m      225.5 m        422.8
+6.    30*   Piotr ZYLA               POL           229.0 m      226.0 m        420.0
+7.    35*   Giovanni BRESADOLA       ITA           222.0 m      234.5 m        419.8
+8.    8     Johann FORFANG           NOR           229.0 m      225.5 m        419.4
+9.    27    Stephan LEYHE            GER           225.0 m      229.5 m        418.9
+10.   18    Andreas SCHULER          SUI           219.0 m      233.5 m        418.5
+11.   22    Peter PREVC              SLO           224.5 m      228.0 m        417.5
+12.   15    Daniel HUBER             AUT           227.5 m      222.0 m        413.4
+13.   9     Ryoyu KOBAYASHI          JPN           222.0 m      227.0 m        412.8
+14.   19*   Andreas ALAMOMMO         FIN           223.0 m      227.0 m        412.0
+15.   10    Halvor GRANERUD          NOR           216.5 m      230.5 m        411.9
+16.   21    Timi ZAJC                SLO           234.0 m      213.5 m        408.5
+17.   20    Jakub WOLNY              POL           215.5 m      225.0 m        405.1
+18.   1     Michael HAYBOECK         AUT           220.0 m      221.5 m        403.8
+18.   13    Daniel TANDE             NOR           216.0 m      225.5 m        403.8
+20.   43*   Pius PASCHKE             GER           223.5 m      220.0 m        403.7
+21.   36    Antti AALTO              FIN           232.5 m**    220.5 m        391.6
+22.   23    Marius LINDVIK           NOR           225.0 m      207.5 m        391.5
+23.   12    Tilen BARTOL             SLO           222.5 m      210.5 m        391.1
+24.   14    Evgeniy KLIMOV           RUS           206.5 m      228.0 m        389.9
+25.   2     Robert JOHANSSON         NOR           222.0 m      208.0 m        386.0
+26.   33*   Mikhail NAZAROV          RUS           215.0 m      211.5 m        382.3
+27.   44    Martin HAMANN            GER           210.0 m      215.5 m        382.1
+28.   6     Markus EISENBICHLER      GER           205.0 m      218.0 m        381.1
+29.   46    Viktor POLASEK           CZE           207.0 m      190.5 m        343.5
+30.   25    Jan HOERL                AUT           187.0 m      202.0 m*       311.3
+31.   17    Alex INSAM               ITA             0.0 m*     228.5 m        209.7
+32.   47    Simon AMMANN             SUI           210.5 m                     187.1
+33.   28    Niko KYTOSAHO            FIN           207.0 m                     185.4
+34.   24    Aleksander ZNISZCZOL     POL           208.0 m                     185.1
+35.   49    Manuel FETTNER           AUT           207.0 m                     184.4
+36.   7     Anze LANISEK             SLO           204.0 m                     182.3
+37.   37    Dominik PETER            SUI           206.0 m                     179.7
+38.   40    Ziga JELAR               SLO           202.0 m                     179.4
+39.   41    Bor PAVLOVCIC            SLO           202.5 m                     179.0
+40.   5     Anze SEMENIC             SLO           199.5 m                     177.9
+41.   42    Pawel WASEK              POL           200.5 m                     177.6
+42.   45    Matthew SOUKUP           CAN           198.5 m                     173.2
+43.   31    Cene PREVC               SLO           199.0 m                     172.8
+44.   29    Markus SCHIFFNER         AUT           191.5 m                     167.3
+45.   50    Cestmir KOZISEK          CZE           192.0 m                     163.9
+46.   38    Constantin SCHMID        GER           192.0 m                     159.9
+47.   48    Junshiro KOBAYASHI       JPN           190.0 m                     158.5
+48.   26    Keiichi SATO             JPN           182.0 m                     151.9
+49.   39    Artii AIGRO              EST           167.5 m*                    107.5
+50.   34    Naoki NAKAMURA           JPN             0.0 m*                      0.0

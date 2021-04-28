@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Database of people",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "acc_nr": {
+                "type": "string",
+                "pattern": "([0-9]{11}|[0-9]{2}-[0-9]{3}-[0-9]{6})"
+            },
+            "pesel": {
+                "type": "string",
+                "pattern": "[0-9]{11}"
+
+            },
+            "date_of_birth": {
+                "type": "string"
+
+            },
+            "e-mail": {
+                "type": "string",
+                "pattern": "[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}"
+            }
+        },
+        "required": ["acc_nr", "pesel", "date_of_birth", "e-mail"]
+    }
+}

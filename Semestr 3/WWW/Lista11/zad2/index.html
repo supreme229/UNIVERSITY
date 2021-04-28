@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript'>
+        var map, infobox, counter = 0;
+
+        function GetMap() {
+            map = new Microsoft.Maps.Map('#myMap',
+                {});
+
+            map.setView({
+                mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+                center: new Microsoft.Maps.Location(51.11055, 17.025558),
+                zoom: 10
+            });
+
+            infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
+                visible: false
+            });
+
+            infobox.setMap(map);
+
+            Microsoft.Maps.Events.addHandler(map, 'click', getLatlng);
+            document.getElementById("show").addEventListener("click", function () {
+                l1 = document.getElementById("lista");
+                pushpinShowInfoBox(map.entities.get(l1.selectedIndex));
+            });
+            document.getElementById("delete").addEventListener("click", function () {
+                l1 = document.getElementById("lista");
+                pushpinDelete(l1.selectedIndex, l1.options[l1.selectedIndex]);
+            });
+        }
+
+        function getLatlng(e) {
+            if (e.targetType == "map") {
+                var point = new Microsoft.Maps.Point(e.getX(), e.getY());
+                var locTemp = e.target.tryPixelToLocation(point);
+                var location = new Microsoft.Maps.Location(locTemp.latitude, locTemp.longitude);
+                var pin = new Microsoft.Maps.Pushpin(location, { 'draggable': false });
+                pin.metadata = {
+                    title: "Pin number " + (counter + 1).toString(),
+                    description: 'Nice pin'
+                };
+                map.entities.push(pin);
+                var list = document.getElementById("lista");
+                list.insertAdjacentHTML('beforeend', "<option>" + locTemp.latitude.toString() + " " + locTemp.longitude.toString() + "</option>")
+                counter += 1;
+            }
+        }
+
+        function pushpinShowInfoBox(e) {
+            infobox.setOptions({
+                location: e.getLocation(),
+                title: e.metadata.title,
+                description: e.metadata.description,
+                visible: true
+            });
+        }
+
+        function pushpinDelete(e, obj) {
+            obj.remove();
+            map.entities.removeAt(e);
+            infobox.setOptions({
+                visible: false
+            });
+        }
+
+    </script>
+
+    <script type='text/javascript'>
+    </script>
+
+    <script type='text/javascript'
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Aot0HtpLvhJywUyyL3ANbstntw9eSa8sO08cCAEX3Gqy-sePm2Tel47Vo7EoBfIx'
+        async defer></script>
+
+
+</head>
+
+<body>
+    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+
+    <select id="lista">
+    </select>
+    <button type='button' id="show">Pokaż</button>
+    <button type='button' id="delete">Usuń</button>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Form </title>
+</head>
+
+<body>
+    <form onsubmit="return false">
+        <label>Marka</label><br>
+        <select name="marka" id="marka"></select><br>
+        <label>Model</label><br>
+        <select name="model" id="model"></select><br>
+        <label>Nowa pozycja</label><br>
+        <input type="text" name="nowa" id="nowa"></select><br>
+        <label>Chcę dodać:</label><br>
+        <input type="radio" name="rodzaj" value="marka" checked><label>Markę</label></input>
+        <input type="radio" name="rodzaj" value="model"><label>Model</label></input><br>
+        <button id="dodaj-pozycje" name="dodaj">Dodaj pozycję</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

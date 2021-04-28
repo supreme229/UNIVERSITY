@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title> Highlight text </title>
+</head>
+
+<body>
+    <div id="dialog-form" title="Create new user">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname" class="text ui-widget-content ui-corner-all">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" class="text ui-widget-content ui-corner-all">
+                <label for="post-code">Post code</label>
+                <input type="text" name="post-code" id="post-code" class="text ui-widget-content ui-corner-all">
+                <label for="date-of-birth">Date of birth</label>
+                <input type="text" name="date-of-birth" id="date-of-birth" class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="dialog-delete-confirmation" title="Delete user?">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>These items will be
+            permanently deleted and cannot be recovered. Are you sure?</p>
+    </div>
+
+
+    <div id="users-contain" class="ui-widget">
+        <h1>Existing Users:</h1>
+        <table id="users" class="ui-widget ui-widget-content">
+            <thead>
+                <tr class="ui-widget-header ">
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>City</th>
+                    <th>Post code</th>
+                    <th>Date of birth</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button id="create-user">Create new user</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

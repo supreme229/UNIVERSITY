@@ -1,0 +1,50 @@
+﻿1.    12    Johann FORFANG           NOR           142.5 m      138.0 m        291.4
+2.    13    Stefan KRAFT             AUT           141.5 m      140.0 m        291.2
+3.    20    Piotr ZYLA               POL           141.0 m      138.5 m        288.6
+4.    22    Daniel HUBER             AUT           139.0 m      140.0 m        287.2
+5.    10    Andrzej STEKALA          POL           138.0 m      141.5 m        287.1
+6.    1     Markus EISENBICHLER      GER           138.0 m      140.5 m        286.3
+6.    15    Killian PEIER            SUI           139.0 m      139.5 m        286.3
+8.    39*   Michael HAYBOECK         AUT           142.0 m      137.0 m        286.2
+9.    23    Stephan LEYHE            GER           140.0 m      138.0 m        285.9
+10.   5     Marius LINDVIK           NOR           142.0 m      136.5 m        284.3
+11.   36*   Antti AALTO              FIN           137.0 m      139.0 m        282.8
+12.   17    Ryoyu KOBAYASHI          JPN           136.0 m      140.0 m        281.8
+13.   8     Karl GEIGER              GER           139.0 m      136.5 m        281.4
+14.   18    Timi ZAJC                SLO           135.5 m      139.0 m        280.6
+15.   6     Robert JOHANSSON         NOR           139.5 m      135.5 m        280.5
+16.   21    Alex INSAM               ITA           138.0 m      137.5 m        278.9
+17.   14    Andreas SCHULER          SUI           135.0 m      137.5 m        277.5
+18.   2     Kamil STOCH              POL           134.5 m      138.0 m        275.5
+19.   16    Anze SEMENIC             SLO           134.0 m      139.5 m        273.8
+20.   4     Anze LANISEK             SLO           136.5 m      136.0 m        272.5
+21.   26    Andreas ALAMOMMO         FIN           137.5 m      133.5 m        270.8
+22.   19    Peter PREVC              SLO           135.5 m      135.0 m        268.9
+23.   48    Mikhail NAZAROV          RUS           130.5 m      136.5 m        266.6
+24.   11    Halvor GRANERUD          NOR           137.5 m      129.0 m        265.7
+25.   7     Dawid KUBACKI            POL           135.5 m      130.5 m        264.3
+26.   9     Yukiya SATO              JPN           139.0 m      127.0 m        256.8
+27.   37*   Niko KYTOSAHO            FIN           130.5 m      125.5 m        246.3
+28.   40*   Aleksander ZNISZCZOL     POL           128.0 m      126.5 m        245.1
+29.   29*   Domen PREVC              SLO           134.0 m      122.5 m        238.2
+30.   27    Pius PASCHKE             GER           129.5 m      119.5 m        228.2
+31.   47    Klemens MURANKA          POL           128.5 m                     123.3
+32.   28    Jakub WOLNY              POL           129.0 m                     121.7
+33.   3     Daniel TANDE             NOR           127.5 m                     119.5
+34.   24    Tilen BARTOL             SLO           127.5 m                     119.0
+35.   31    Philipp ASCHENWALD       AUT           125.0 m                     117.0
+36.   43    Viktor POLASEK           CZE           125.5 m                     115.4
+37.   49    Vojtech STURSA           CZE           123.5 m                     115.3
+38.   30    Simon AMMANN             SUI           123.0 m                     112.4
+39.   42    Pawel WASEK              POL           121.5 m                     111.2
+40.   32    Keiichi SATO             JPN           121.5 m                     109.2
+41.   33    Constantin SCHMID        GER           120.0 m                     108.5
+42.   50    Thomas LACKNER           AUT           120.0 m                     107.5
+43.   34    Jan HOERL                AUT           121.0 m                     105.3
+44.   45    Eetu NOUSIAINEN          FIN           120.0 m                     103.5
+45.   44    Markus SCHIFFNER         AUT           119.0 m                     102.7
+46.   46    Matthew SOUKUP           CAN           114.5 m                      92.1
+47.   25    Giovanni BRESADOLA       ITA           106.0 m                      83.8
+47.   41    Martin HAMANN            GER           111.0 m                      83.8
+49.   38    Mackenzie BOYD-CLOWES    CAN           117.0 m*                     68.6
+50.   35    Bor PAVLOVCIC            SLO             0.0 m*                      0.0

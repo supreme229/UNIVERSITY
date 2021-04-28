@@ -1,0 +1,20 @@
+CCCC_Module@anonymous@@
+CCCC_Module@char@builtin@
+CCCC_ModExt@char@builtin@<nofile>@0@builtin definition@d?????@@0@d@
+CCCC_Module@double@builtin@
+CCCC_ModExt@double@builtin@<nofile>@0@builtin definition@d?????@@0@d@
+CCCC_Module@float@builtin@
+CCCC_ModExt@float@builtin@<nofile>@0@builtin definition@d?????@@0@d@
+CCCC_Module@int@builtin@
+CCCC_ModExt@int@builtin@<nofile>@0@builtin definition@d?????@@0@d@
+CCCC_Module@long@builtin@
+CCCC_ModExt@long@builtin@<nofile>@0@builtin definition@d?????@@0@d@
+CCCC_Module@void@builtin@
+CCCC_ModExt@void@builtin@<nofile>@0@builtin definition@d?????@@0@d@
+CCCC_Member@anonymous@calculate_tower_height_v1@@(int,int,vector &)@
+CCCC_MemExt@anonymous@calculate_tower_height_v1@@(int,int,vector &)@pr2.cpp@8@definition@F????@LOC:15 COM:0 MVG:5@?@d@
+CCCC_Member@anonymous@calculate_tower_height_v2@@(int,int,vector &,int)@
+CCCC_MemExt@anonymous@calculate_tower_height_v2@@(int,int,vector &,int)@pr2.cpp@25@definition@F????@LOC:28 COM:0 MVG:10@?@d@
+CCCC_Member@anonymous@main@@()@
+CCCC_MemExt@anonymous@main@@()@pr2.cpp@56@definition@F????@LOC:63 COM:0 MVG:14@?@d@
+CCCC_RejExt@pr2.cpp@1@<file scope items>@F????@LOC:1 COM:0 MVG:0@?@r@

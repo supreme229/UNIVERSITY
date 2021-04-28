@@ -1,0 +1,50 @@
+﻿1.    1     Andreas ALAMOMMO         FIN           230.0 m      234.5 m        430.9
+2.    12*   Giovanni BRESADOLA       ITA           232.0 m      229.5 m        427.8
+3.    39    Marius LINDVIK           NOR           233.5 m      223.5 m        420.9
+4.    32    Andrzej STEKALA          POL           230.5 m      225.0 m        420.1
+5.    21    Killian PEIER            SUI           229.0 m      226.0 m        420.0
+6.    2     Stephan LEYHE            GER           225.0 m      229.0 m        419.8
+7.    4     Kamil STOCH              POL           228.5 m      225.5 m        418.8
+8.    13    Jakub WOLNY              POL           230.5 m      226.0 m        417.8
+9.    10    Anze SEMENIC             SLO           227.0 m      225.0 m        415.9
+10.   24    Alex INSAM               ITA           231.5 m      221.0 m        412.5
+11.   16    Robert JOHANSSON         NOR           228.0 m      221.0 m        412.3
+12.   27*   Halvor GRANERUD          NOR           226.5 m      222.5 m        410.8
+13.   5     Daniel TANDE             NOR           221.0 m      228.0 m        410.3
+14.   9     Domen PREVC              SLO           222.5 m      229.5 m        409.4
+15.   17    Daniel HUBER             AUT           220.0 m      224.5 m        408.9
+16.   18    Karl GEIGER              GER           225.0 m      219.0 m        408.3
+17.   3     Johann FORFANG           NOR           217.0 m      228.5 m        407.1
+18.   7     Stefan KRAFT             AUT           226.5 m      218.5 m        405.0
+19.   19*   Antti AALTO              FIN           210.0 m      233.5 m        404.7
+20.   23    Evgeniy KLIMOV           RUS           213.5 m      225.5 m        397.8
+21.   11    Ryoyu KOBAYASHI          JPN           213.0 m      222.5 m        396.1
+22.   6     Andreas SCHULER          SUI           212.5 m      218.0 m        391.6
+23.   14    Piotr ZYLA               POL           206.0 m      226.5 m        390.5
+24.   20    Peter PREVC              SLO           220.0 m      205.0 m        380.0
+25.   8     Markus EISENBICHLER      GER           225.0 m      202.0 m        379.9
+26.   15    Michael HAYBOECK         AUT           217.5 m*     225.0 m        375.5
+27.   29*   Manuel FETTNER           AUT           207.0 m      208.5 m        373.1
+28.   22    Anze LANISEK             SLO           210.5 m      228.5 m*       372.3
+29.   25    Dawid KUBACKI            POL           201.0 m      211.5 m        369.0
+30.   46*   Pawel WASEK              POL           205.0 m      208.0 m        367.1
+31.   35    Matthew SOUKUP           CAN           203.0 m                     181.6
+32.   33    Klemens MURANKA          POL           201.5 m                     178.8
+33.   50    Philipp ASCHENWALD       AUT           202.5 m                     178.5
+34.   47    Martin HAMANN            GER           200.0 m                     177.0
+35.   37    Bor PAVLOVCIC            SLO           198.5 m                     174.2
+36.   43    Gregor SCHLIERENZAUER    AUT           195.0 m                     172.0
+37.   42    Niko KYTOSAHO            FIN           199.5 m                     170.9
+38.   41    Pius PASCHKE             GER           194.0 m                     169.3
+39.   38    Markus SCHIFFNER         AUT           198.0 m                     168.6
+40.   44    Mikhail NAZAROV          RUS           196.5 m                     166.8
+41.   36    Vojtech STURSA           CZE           195.0 m                     166.5
+41.   49    Cestmir KOZISEK          CZE           195.0 m                     166.5
+43.   31    Simon AMMANN             SUI           192.5 m                     166.0
+44.   34    Aleksander ZNISZCZOL     POL           192.0 m                     164.9
+45.   30    Keiichi SATO             JPN           190.0 m                     163.5
+46.   28    Yukiya SATO              JPN           189.0 m                     163.3
+47.   40    Gregor DESCHWANDEN       SUI           189.0 m                     162.3
+48.   26    Tilen BARTOL             SLO           189.0 m                     158.3
+49.   48    Jan HOERL                AUT           185.0 m                     154.5
+50.   45    Viktor POLASEK           CZE           186.0 m                     152.7

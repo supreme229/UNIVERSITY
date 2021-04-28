@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript'>
+        var map;
+        var directionsManager;
+
+        function GetMap() {
+            map = new Microsoft.Maps.Map('#myMap', {});
+
+            Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
+                directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+
+                var wroclawWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Wrocław, PL' });
+                directionsManager.addWaypoint(wroclawWaypoint);
+
+                var gorzowWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Gorzów Wielkopolski, PL' });
+                directionsManager.addWaypoint(gorzowWaypoint);
+
+                var poznanWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Poznań, PL' });
+                directionsManager.addWaypoint(poznanWaypoint);
+
+                var zielonaWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Zielona Góra, PL' });
+                directionsManager.addWaypoint(zielonaWaypoint);
+
+                var walbrzychWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Wałbrzych, PL' });
+                directionsManager.addWaypoint(walbrzychWaypoint);
+
+                var color = new Microsoft.Maps.Color(255, 0, 0, 0);
+                directionsManager.setRenderOptions({
+                    itineraryContainer: '#directionsItinerary',
+                    waypointPushpinOptions: {
+                        color: color,
+                        height: 45,
+                        width: 45,
+                        text: "Miasto"
+                    }
+                });
+
+                directionsManager.calculateDirections();
+            });
+        }
+    </script>
+    <script type='text/javascript'
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Aot0HtpLvhJywUyyL3ANbstntw9eSa8sO08cCAEX3Gqy-sePm2Tel47Vo7EoBfIx'
+        async defer></script>
+</head>
+
+<body>
+    <div id="myMap" style="position:relative;width:800px;height:600px;"></div>
+    <div id='directionsItinerary'></div>
+</body>
+
+</html>
