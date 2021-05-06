@@ -1,0 +1,45 @@
+1.
+
+ar t libc.a | wc -l # 1725
+
+libm to skrypt linkera i grupuje on te dwa pliki:
+ar t libm-2.33.a | wc -l # 806
+ar t libmvec.a | wc -l # 128
+
+2.
+
+dostajemy 5 dodatkowych sekcji z flagą -g
+
+27 .debug_aranges 00000030  0000000000000000  00000000000000
+                 CONTENTS, READONLY, DEBUGGING, OCTETS
+28 .debug_info   0000034d  0000000000000000  000000000000000
+                 CONTENTS, READONLY, DEBUGGING, OCTETS
+29 .debug_abbrev 00000107  0000000000000000  000000000000000
+                 CONTENTS, READONLY, DEBUGGING, OCTETS
+30 .debug_line   00000112  0000000000000000  000000000000000
+                 CONTENTS, READONLY, DEBUGGING, OCTETS
+31 .debug_str    000002bd  0000000000000000  000000000000000
+                 CONTENTS, READONLY, DEBUGGING, OCTETS
+
+gcc -Og -g lazy.c 
+gcc -Og lazy.c 
+
+objdump -g a.out                             // g - wyświetla informacje o sekcjach debugowych (nie używamy)
+objdump -h a.out                             // h - wyświetla tylko nazwy sekcji
+
+objdump -h a.out > rozwiazania/w2-all-2.txt  // przenosi wynik objdumpa do pliku w2-all-2.txt
+diff -y w1-all-2.txt w2-all-2.txt > diff.txt // zapisuje informacje o różnicach między plikami 
+                                             // do pliku diff.txt (flaga -y wyświetla różnice w dwóch kolumnach, mógłby
+                                             // to być po prostu diff bez żadnej flagi, ale miałby brzydszy output :< )
+
+3.
+
+readelf -d python3.8
+
+Shared library: [libc.so.6]
+Shared library: [libpthread.so.0]
+Shared library: [libdl.so.2]
+Shared library: [libutil.so.1]
+Shared library: [libm.so.6]
+Shared library: [libexpat.so.1]
+Shared library: [libz.so.1]

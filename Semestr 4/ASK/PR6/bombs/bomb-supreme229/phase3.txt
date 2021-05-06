@@ -1,0 +1,47 @@
+0000000000001469 <phase_3>:
+    1469:	48 83 ec 18          	sub    $0x18,%rsp
+    146d:	48 8d 4c 24 08       	lea    0x8(%rsp),%rcx
+    1472:	48 8d 54 24 0c       	lea    0xc(%rsp),%rdx
+    1477:	48 8d 35 b1 1e 00 00 	lea    0x1eb1(%rip),%rsi        # 332f <array.3195+0x14f>
+    147e:	b8 00 00 00 00       	mov    $0x0,%eax
+    1483:	e8 a8 fc ff ff       	callq  1130 <__isoc99_sscanf@plt>
+    1488:	83 f8 01             	cmp    $0x1,%eax
+    148b:	7e 1b                	jle    14a8 <phase_3+0x3f>
+    148d:	83 7c 24 0c 07       	cmpl   $0x7,0xc(%rsp)
+    1492:	77 4c                	ja     14e0 <phase_3+0x77>
+    1494:	8b 44 24 0c          	mov    0xc(%rsp),%eax
+    1498:	48 8d 15 21 1d 00 00 	lea    0x1d21(%rip),%rdx        # 31c0 <_IO_stdin_used+0x1c0>
+    149f:	48 63 04 82          	movslq (%rdx,%rax,4),%rax
+    14a3:	48 01 d0             	add    %rdx,%rax
+    14a6:	ff e0                	jmpq   *%rax
+    14a8:	e8 87 04 00 00       	callq  1934 <explode_bomb>
+    14ad:	eb de                	jmp    148d <phase_3+0x24>
+    14af:	b8 3b 01 00 00       	mov    $0x13b,%eax
+    14b4:	eb 3b                	jmp    14f1 <phase_3+0x88>
+    14b6:	b8 fa 02 00 00       	mov    $0x2fa,%eax
+    14bb:	eb 34                	jmp    14f1 <phase_3+0x88>
+    14bd:	b8 a4 02 00 00       	mov    $0x2a4,%eax
+    14c2:	eb 2d                	jmp    14f1 <phase_3+0x88>
+    14c4:	b8 9a 00 00 00       	mov    $0x9a,%eax
+    14c9:	eb 26                	jmp    14f1 <phase_3+0x88>
+    14cb:	b8 90 00 00 00       	mov    $0x90,%eax
+    14d0:	eb 1f                	jmp    14f1 <phase_3+0x88>
+    14d2:	b8 4e 03 00 00       	mov    $0x34e,%eax
+    14d7:	eb 18                	jmp    14f1 <phase_3+0x88>
+    14d9:	b8 8f 00 00 00       	mov    $0x8f,%eax
+    14de:	eb 11                	jmp    14f1 <phase_3+0x88>
+    14e0:	e8 4f 04 00 00       	callq  1934 <explode_bomb>
+    14e5:	b8 00 00 00 00       	mov    $0x0,%eax
+    14ea:	eb 05                	jmp    14f1 <phase_3+0x88>
+    14ec:	b8 d5 01 00 00       	mov    $0x1d5,%eax
+    14f1:	39 44 24 08          	cmp    %eax,0x8(%rsp)
+    14f5:	75 05                	jne    14fc <phase_3+0x93>
+    14f7:	48 83 c4 18          	add    $0x18,%rsp
+    14fb:	c3                   	retq   
+    14fc:	e8 33 04 00 00       	callq  1934 <explode_bomb>
+    1501:	eb f4                	jmp    14f7 <phase_3+0x8e>
+
+    0000000000001130 <__isoc99_sscanf@plt>:
+    1130:	ff 25 62 3f 00 00    	jmpq   *0x3f62(%rip)        # 5098 <__isoc99_sscanf@GLIBC_2.7>
+    1136:	68 10 00 00 00       	pushq  $0x10
+    113b:	e9 e0 fe ff ff       	jmpq   1020 <.plt>

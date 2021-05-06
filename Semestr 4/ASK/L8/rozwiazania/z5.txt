@@ -1,0 +1,120 @@
+There are 10 section headers, starting at offset 0x1e0:
+
+Section Headers:
+  [Nr] Name
+       Type              Address          Offset            Link
+       Size              EntSize          Info              Align
+       Flags
+  [ 0] 
+       NULL             0000000000000000  0000000000000000  0
+       0000000000000000 0000000000000000  0                 0
+       [0000000000000000]: 
+  [ 1] .text
+       PROGBITS         0000000000000000  0000000000000040  0
+       0000000000000000 0000000000000000  0                 1
+       [0000000000000006]: ALLOC, EXEC
+  [ 2] .data
+       PROGBITS         0000000000000000  0000000000000040  0
+       0000000000000008 0000000000000000  0                 8
+       [0000000000000003]: WRITE, ALLOC
+  [ 3] .bss
+       NOBITS           0000000000000000  0000000000000050  0
+       0000000000000011 0000000000000000  0                 16
+       [0000000000000003]: WRITE, ALLOC
+  [ 4] .comment
+       PROGBITS         0000000000000000  0000000000000050  0
+       000000000000002b 0000000000000001  0                 1
+       [0000000000000030]: MERGE, STRINGS
+  [ 5] .note.GNU-stack
+       PROGBITS         0000000000000000  000000000000007b  0
+       0000000000000000 0000000000000000  0                 1
+       [0000000000000000]: 
+  [ 6] .note.gnu.property
+       NOTE             0000000000000000  0000000000000080  0
+       0000000000000020 0000000000000000  0                 8
+       [0000000000000002]: ALLOC
+  [ 7] .symtab
+       SYMTAB           0000000000000000  00000000000000a0  8
+       00000000000000d8 0000000000000018  7                 8
+       [0000000000000000]: 
+  [ 8] .strtab
+       STRTAB           0000000000000000  0000000000000178  0
+       000000000000000a 0000000000000000  0                 1
+       [0000000000000000]: 
+  [ 9] .shstrtab
+       STRTAB           0000000000000000  0000000000000182  0
+       0000000000000058 0000000000000000  0                 1
+       [0000000000000000]: 
+
+Symbol table '.symtab' contains 9 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 0000000000000000     0 SECTION LOCAL  DEFAULT    2 
+     3: 0000000000000000     0 SECTION LOCAL  DEFAULT    3 
+     4: 0000000000000000     0 SECTION LOCAL  DEFAULT    4 
+     5: 0000000000000000     0 SECTION LOCAL  DEFAULT    5 
+     6: 0000000000000000     0 SECTION LOCAL  DEFAULT    6 
+     7: 0000000000000000    17 OBJECT  GLOBAL DEFAULT    3 code
+     8: 0000000000000000     8 OBJECT  GLOBAL DEFAULT    2 foo
+
+     
+There are 10 section headers, starting at offset 0x1e0:
+
+Section Headers:
+  [Nr] Name
+       Type              Address          Offset            Link
+       Size              EntSize          Info              Align
+       Flags
+  [ 0] 
+       NULL             0000000000000000  0000000000000000  0
+       0000000000000000 0000000000000000  0                 0
+       [0000000000000000]: 
+  [ 1] .text
+       PROGBITS         0000000000000000  0000000000000040  0
+       0000000000000000 0000000000000000  0                 1
+       [0000000000000006]: ALLOC, EXEC
+  [ 2] .data
+       PROGBITS         0000000000000000  0000000000000040  0
+       0000000000000004 0000000000000000  0                 4
+       [0000000000000003]: WRITE, ALLOC
+  [ 3] .bss
+       NOBITS           0000000000000000  0000000000000050  0
+       000000000000001e 0000000000000000  0                 16
+       [0000000000000003]: WRITE, ALLOC
+  [ 4] .comment
+       PROGBITS         0000000000000000  0000000000000050  0
+       000000000000002b 0000000000000001  0                 1
+       [0000000000000030]: MERGE, STRINGS
+  [ 5] .note.GNU-stack
+       PROGBITS         0000000000000000  000000000000007b  0
+       0000000000000000 0000000000000000  0                 1
+       [0000000000000000]: 
+  [ 6] .note.gnu.property
+       NOTE             0000000000000000  0000000000000080  0
+       0000000000000020 0000000000000000  0                 8
+       [0000000000000002]: ALLOC
+  [ 7] .symtab
+       SYMTAB           0000000000000000  00000000000000a0  8
+       00000000000000d8 0000000000000018  7                 8
+       [0000000000000000]: 
+  [ 8] .strtab
+       STRTAB           0000000000000000  0000000000000178  0
+       000000000000000a 0000000000000000  0                 1
+       [0000000000000000]: 
+  [ 9] .shstrtab
+       STRTAB           0000000000000000  0000000000000182  0
+       0000000000000058 0000000000000000  0                 1
+       [0000000000000000]: 
+
+Symbol table '.symtab' contains 9 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 0000000000000000     0 SECTION LOCAL  DEFAULT    2 
+     3: 0000000000000000     0 SECTION LOCAL  DEFAULT    3 
+     4: 0000000000000000     0 SECTION LOCAL  DEFAULT    4 
+     5: 0000000000000000     0 SECTION LOCAL  DEFAULT    5 
+     6: 0000000000000000     0 SECTION LOCAL  DEFAULT    6 
+     7: 0000000000000000    30 OBJECT  GLOBAL DEFAULT    3 dead
+     8: 0000000000000000     4 OBJECT  GLOBAL DEFAULT    2 bar

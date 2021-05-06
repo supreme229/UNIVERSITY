@@ -1,0 +1,47 @@
+0000000000001425 <phase_2>:
+    1425:	55                   	push   %rbp #-8
+    1426:	53                   	push   %rbx #-16
+    1427:	48 83 ec 28          	sub    $0x28,%rsp #-44
+    142b:	48 89 e6             	mov    %rsp,%rsi #-44 do rsi
+    142e:	e8 27 05 00 00       	callq  195a <read_six_numbers>
+    1433:	83 3c 24 01          	cmpl   $0x1,(%rsp)
+    1437:	75 09                	jne    1442 <phase_2+0x1d>
+    1439:	48 89 e3             	mov    %rsp,%rbx
+    143c:	48 8d 6b 14          	lea    0x14(%rbx),%rbp
+    1440:	eb 15                	jmp    1457 <phase_2+0x32>
+    1442:	e8 ed 04 00 00       	callq  1934 <explode_bomb>
+    1447:	eb f0                	jmp    1439 <phase_2+0x14>
+    1449:	e8 e6 04 00 00       	callq  1934 <explode_bomb>
+    144e:	48 83 c3 04          	add    $0x4,%rbx
+    1452:	48 39 eb             	cmp    %rbp,%rbx
+    1455:	74 0b                	je     1462 <phase_2+0x3d>
+    1457:	8b 03                	mov    (%rbx),%eax
+    1459:	01 c0                	add    %eax,%eax
+    145b:	39 43 04             	cmp    %eax,0x4(%rbx)
+    145e:	74 ee                	je     144e <phase_2+0x29>
+    1460:	eb e7                	jmp    1449 <phase_2+0x24>
+    1462:	48 83 c4 28          	add    $0x28,%rsp
+    1466:	5b                   	pop    %rbx
+    1467:	5d                   	pop    %rbp
+    1468:	c3                   	retq   
+
+
+    000000000000195a <read_six_numbers>:
+    195a:	48 83 ec 08          	sub    $0x8,%rsp
+    195e:	48 89 f2             	mov    %rsi,%rdx
+    1961:	48 8d 4e 04          	lea    0x4(%rsi),%rcx
+    1965:	48 8d 46 14          	lea    0x14(%rsi),%rax
+    1969:	50                   	push   %rax
+    196a:	48 8d 46 10          	lea    0x10(%rsi),%rax
+    196e:	50                   	push   %rax
+    196f:	4c 8d 4e 0c          	lea    0xc(%rsi),%r9
+    1973:	4c 8d 46 08          	lea    0x8(%rsi),%r8
+    1977:	48 8d 35 a5 19 00 00 	lea    0x19a5(%rip),%rsi        # 3323 <array.3195+0x143>
+    197e:	b8 00 00 00 00       	mov    $0x0,%eax
+    1983:	e8 a8 f7 ff ff       	callq  1130 <__isoc99_sscanf@plt>
+    1988:	48 83 c4 10          	add    $0x10,%rsp
+    198c:	83 f8 05             	cmp    $0x5,%eax
+    198f:	7e 05                	jle    1996 <read_six_numbers+0x3c>
+    1991:	48 83 c4 08          	add    $0x8,%rsp
+    1995:	c3                   	retq   
+    1996:	e8 99 ff ff ff       	callq  1934 <explode_bomb>

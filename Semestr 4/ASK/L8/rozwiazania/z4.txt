@@ -1,0 +1,15 @@
+ objdump -s str-b.o | grep "Hello, world!"
+ 
+ 0000 48656c6c 6f2c2077 6f726c64 2100      Hello, world!.  
+
+ Contents of section .text:
+ 0000 f30f1efa b8000000 00c3               ..........      
+Contents of section .rodata.str1.1:
+ 0000 48656c6c 6f2c2077 6f726c64 2100      Hello, world!.  
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 7520392e  .GCC: (Ubuntu 9.
+ 0010 332e302d 31377562 756e7475 317e3230  3.0-17ubuntu1ü20
+ 0020 2e303429 20392e33 2e3000             .04) 9.3.0.     
+Contents of section .note.gnu.property:
+ 0000 04000000 10000000 05000000 474e5500  ............GNU.
+ 0010 020000c0 04000000 03000000 00000000  ................

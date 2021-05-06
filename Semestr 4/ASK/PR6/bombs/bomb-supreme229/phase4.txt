@@ -1,0 +1,52 @@
+000000000000153b <phase_4>:
+    153b:	48 83 ec 18          	sub    $0x18,%rsp
+    153f:	48 8d 4c 24 0c       	lea    0xc(%rsp),%rcx # 2 argument
+    1544:	48 8d 54 24 08       	lea    0x8(%rsp),%rdx # 1 argument
+    1549:	48 8d 35 df 1d 00 00 	lea    0x1ddf(%rip),%rsi        # 332f <array.3195+0x14f>
+    1550:	b8 00 00 00 00       	mov    $0x0,%eax
+    1555:	e8 d6 fb ff ff       	callq  1130 <__isoc99_sscanf@plt>
+    rax = ilosc argumentow
+    155a:	83 f8 02             	cmp    $0x2,%eax
+    musza byc 2 argumenty
+    155d:	75 0c                	jne    156b <phase_4+0x30>
+    155f:	8b 44 24 0c          	mov    0xc(%rsp),%eax
+    2 argument do raxa
+    1563:	83 e8 02             	sub    $0x2,%eax
+    1566:	83 f8 02             	cmp    $0x2,%eax
+    1569:	76 05                	jbe    1570 <phase_4+0x35>
+    2 argument miedzy 2 a 4
+    156b:	e8 c4 03 00 00       	callq  1934 <explode_bomb>
+    1570:	8b 74 24 0c          	mov    0xc(%rsp),%esi
+    1574:	bf 05 00 00 00       	mov    $0x5,%edi
+    1579:	e8 85 ff ff ff       	callq  1503 <func4>
+    157e:	39 44 24 08          	cmp    %eax,0x8(%rsp)
+    1582:	75 05                	jne    1589 <phase_4+0x4e>
+    1584:	48 83 c4 18          	add    $0x18,%rsp
+    1588:	c3                   	retq   
+    1589:	e8 a6 03 00 00       	callq  1934 <explode_bomb>
+    158e:	eb f4                	jmp    1584 <phase_4+0x49>
+
+0000000000001503 <func4>:
+    1503:	b8 00 00 00 00       	mov    $0x0,%eax
+    1508:	85 ff                	test   %edi,%edi
+    150a:	7e 2e                	jle    153a <func4+0x37>
+    150c:	89 f0                	mov    %esi,%eax
+    150e:	83 ff 01             	cmp    $0x1,%edi
+    1511:	74 27                	je     153a <func4+0x37>
+    1513:	41 54                	push   %r12
+    1515:	55                   	push   %rbp
+    1516:	53                   	push   %rbx
+    1517:	41 89 f4             	mov    %esi,%r12d
+    151a:	89 fb                	mov    %edi,%ebx
+    151c:	8d 7f ff             	lea    -0x1(%rdi),%edi
+    151f:	e8 df ff ff ff       	callq  1503 <func4>
+    1524:	42 8d 2c 20          	lea    (%rax,%r12,1),%ebp
+    1528:	8d 7b fe             	lea    -0x2(%rbx),%edi
+    152b:	44 89 e6             	mov    %r12d,%esi
+    152e:	e8 d0 ff ff ff       	callq  1503 <func4>
+    1533:	01 e8                	add    %ebp,%eax
+    1535:	5b                   	pop    %rbx
+    1536:	5d                   	pop    %rbp
+    1537:	41 5c                	pop    %r12
+    1539:	c3                   	retq   
+    153a:	c3                   	retq   

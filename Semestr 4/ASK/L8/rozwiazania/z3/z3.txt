@@ -1,0 +1,33 @@
+ar t libc.a | wc -l # 1725
+
+libm to skrypt linkera i grupuje on te dwa pliki:
+ar t libm-2.33.a | wc -l # 806
+ar t libmvec.a | wc -l # 128
+
+0000000000001149 <main>:
+    1149:	f3 0f 1e fa          	endbr64 
+    114d:	48 83 ec 08          	sub    $0x8,%rsp
+    1151:	48 8d 3d ac 0e 00 00 	lea    0xeac(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+    1158:	e8 f3 fe ff ff       	callq  1050 <puts@plt>
+    115d:	48 8d 3d ab 0e 00 00 	lea    0xeab(%rip),%rdi        # 200f <_IO_stdin_used+0xf>
+    1164:	e8 e7 fe ff ff       	callq  1050 <puts@plt>
+    1169:	b8 00 00 00 00       	mov    $0x0,%eax
+    116e:	48 83 c4 08          	add    $0x8,%rsp
+    1172:	c3                   	retq   
+    1173:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    117a:	00 00 00 
+    117d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001149 <main>:
+    1149:	f3 0f 1e fa          	endbr64 
+    114d:	48 83 ec 08          	sub    $0x8,%rsp
+    1151:	48 8d 3d ac 0e 00 00 	lea    0xeac(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+    1158:	e8 f3 fe ff ff       	callq  1050 <puts@plt>
+    115d:	48 8d 3d ab 0e 00 00 	lea    0xeab(%rip),%rdi        # 200f <_IO_stdin_used+0xf>
+    1164:	e8 e7 fe ff ff       	callq  1050 <puts@plt>
+    1169:	b8 00 00 00 00       	mov    $0x0,%eax
+    116e:	48 83 c4 08          	add    $0x8,%rsp
+    1172:	c3                   	retq   
+    1173:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    117a:	00 00 00 
+    117d:	0f 1f 00             	nopl   (%rax)

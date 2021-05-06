@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="zadanie1.CarTest" time="0.008" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/suprememe/Desktop/University/Semestr 4/TG/mockito/target/test-classes:/home/suprememe/Desktop/University/Semestr 4/TG/mockito/target/classes:/home/suprememe/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.2.0/junit-jupiter-api-5.2.0.jar:/home/suprememe/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/home/suprememe/.m2/repository/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar:/home/suprememe/.m2/repository/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar:/home/suprememe/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.2.0/junit-jupiter-engine-5.2.0.jar:/home/suprememe/.m2/repository/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar:/home/suprememe/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.2.0/junit-jupiter-params-5.2.0.jar:/home/suprememe/.m2/repository/org/mockito/mockito-junit-jupiter/2.18.3/mockito-junit-jupiter-2.18.3.jar:/home/suprememe/.m2/repository/org/mockito/mockito-core/2.18.3/mockito-core-2.18.3.jar:/home/suprememe/.m2/repository/net/bytebuddy/byte-buddy/1.8.5/byte-buddy-1.8.5.jar:/home/suprememe/.m2/repository/net/bytebuddy/byte-buddy-agent/1.8.5/byte-buddy-agent-1.8.5.jar:/home/suprememe/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="PL"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/suprememe/Desktop/University/Semestr 4/TG/mockito/target/surefire/surefirebooter401920577652246629.jar /home/suprememe/Desktop/University/Semestr 4/TG/mockito/target/surefire 2021-05-06T16-53-31_962-jvmRun1 surefire10942298809789268608tmp surefire_05934021689070263084tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/suprememe/Desktop/University/Semestr 4/TG/mockito/target/test-classes:/home/suprememe/Desktop/University/Semestr 4/TG/mockito/target/classes:/home/suprememe/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.2.0/junit-jupiter-api-5.2.0.jar:/home/suprememe/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/home/suprememe/.m2/repository/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar:/home/suprememe/.m2/repository/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar:/home/suprememe/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.2.0/junit-jupiter-engine-5.2.0.jar:/home/suprememe/.m2/repository/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar:/home/suprememe/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.2.0/junit-jupiter-params-5.2.0.jar:/home/suprememe/.m2/repository/org/mockito/mockito-junit-jupiter/2.18.3/mockito-junit-jupiter-2.18.3.jar:/home/suprememe/.m2/repository/org/mockito/mockito-core/2.18.3/mockito-core-2.18.3.jar:/home/suprememe/.m2/repository/net/bytebuddy/byte-buddy/1.8.5/byte-buddy-1.8.5.jar:/home/suprememe/.m2/repository/net/bytebuddy/byte-buddy-agent/1.8.5/byte-buddy-agent-1.8.5.jar:/home/suprememe/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/suprememe"/>
+    <property name="user.language" value="pl"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/suprememe/Desktop/University/Semestr 4/TG/mockito"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/suprememe/Desktop/University/Semestr 4/TG/mockito/target/surefire/surefirebooter401920577652246629.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.11+9-Ubuntu-0ubuntu2.20.04"/>
+    <property name="user.name" value="suprememe"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.8.0-50-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/suprememe/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.11"/>
+    <property name="user.dir" value="/home/suprememe/Desktop/University/Semestr 4/TG/mockito"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="11.0.11+9-Ubuntu-0ubuntu2.20.04"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testFindMileageBetweenYears" classname="zadanie1.CarTest" time="0.001"/>
+</testsuite>

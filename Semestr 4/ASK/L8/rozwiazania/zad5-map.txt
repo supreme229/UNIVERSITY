@@ -1,0 +1,305 @@
+
+Merging program properties					Merging program properties
+
+
+Discarded input sections					Discarded input sections
+
+ .note.gnu.property						 .note.gnu.property
+                0x0000000000000000       0x20 bar.o	      |	                0x0000000000000000       0x20 foo.o
+
+Memory Configuration						Memory Configuration
+
+Name             Origin             Length             Attrib	Name             Origin             Length             Attrib
+*default*        0x0000000000000000 0xffffffffffffffff		*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map					Linker script and memory map
+
+LOAD foo.o						      <
+LOAD bar.o							LOAD bar.o
+							      >	LOAD foo.o
+
+.interp								.interp
+ *(.interp)							 *(.interp)
+
+.note.gnu.property						.note.gnu.property
+                0x0000000000000000       0x20			                0x0000000000000000       0x20
+ .note.gnu.property						 .note.gnu.property
+                0x0000000000000000       0x20 foo.o	      |	                0x0000000000000000       0x20 bar.o
+
+.note.gnu.build-id						.note.gnu.build-id
+ *(.note.gnu.build-id)						 *(.note.gnu.build-id)
+
+.hash								.hash
+ *(.hash)							 *(.hash)
+
+.gnu.hash							.gnu.hash
+ *(.gnu.hash)							 *(.gnu.hash)
+
+.dynsym								.dynsym
+ *(.dynsym)							 *(.dynsym)
+
+.dynstr								.dynstr
+ *(.dynstr)							 *(.dynstr)
+
+.gnu.version							.gnu.version
+ *(.gnu.version)						 *(.gnu.version)
+
+.gnu.version_d							.gnu.version_d
+ *(.gnu.version_d)						 *(.gnu.version_d)
+
+.gnu.version_r							.gnu.version_r
+ *(.gnu.version_r)						 *(.gnu.version_r)
+
+.rela.init							.rela.init
+ *(.rela.init)							 *(.rela.init)
+
+.rela.text							.rela.text
+ *(.rela.text)							 *(.rela.text)
+
+.rela.fini							.rela.fini
+ *(.rela.fini)							 *(.rela.fini)
+
+.rela.rodata							.rela.rodata
+ *(.rela.rodata)						 *(.rela.rodata)
+
+.rela.data.rel.ro						.rela.data.rel.ro
+ *(.rela.data.rel.ro)						 *(.rela.data.rel.ro)
+
+.rela.data							.rela.data
+ *(.rela.data)							 *(.rela.data)
+
+.rela.tdata							.rela.tdata
+ *(.rela.tdata)							 *(.rela.tdata)
+
+.rela.tbss							.rela.tbss
+ *(.rela.tbss)							 *(.rela.tbss)
+
+.rela.ctors							.rela.ctors
+ *(.rela.ctors)							 *(.rela.ctors)
+
+.rela.dtors							.rela.dtors
+ *(.rela.dtors)							 *(.rela.dtors)
+
+.rela.got							.rela.got
+ *(.rela.got)							 *(.rela.got)
+
+.rela.bss							.rela.bss
+ *(.rela.bss)							 *(.rela.bss)
+
+.rela.ldata							.rela.ldata
+ *(.rela.ldata)							 *(.rela.ldata)
+
+.rela.lbss							.rela.lbss
+ *(.rela.lbss)							 *(.rela.lbss)
+
+.rela.lrodata							.rela.lrodata
+ *(.rela.lrodata)						 *(.rela.lrodata)
+
+.rela.ifunc							.rela.ifunc
+ *(.rela.ifunc)							 *(.rela.ifunc)
+
+.rela.plt							.rela.plt
+ *(.rela.plt)							 *(.rela.plt)
+
+.init								.init
+ *(SORT_NONE(.init))						 *(SORT_NONE(.init))
+
+.plt								.plt
+ *(.plt)							 *(.plt)
+
+.plt.got							.plt.got
+ *(.plt.got)							 *(.plt.got)
+
+.plt.sec							.plt.sec
+ *(.plt.sec)							 *(.plt.sec)
+
+.text           0x0000000000000000        0x0			.text           0x0000000000000000        0x0
+ *(.text .stub)							 *(.text .stub)
+ .text          0x0000000000000000        0x0 foo.o	      <
+ .text          0x0000000000000000        0x0 bar.o		 .text          0x0000000000000000        0x0 bar.o
+							      >	 .text          0x0000000000000000        0x0 foo.o
+ *(.gnu.warning)						 *(.gnu.warning)
+
+.fini								.fini
+ *(SORT_NONE(.fini))						 *(SORT_NONE(.fini))
+
+.rodata								.rodata
+ *(.rodata)							 *(.rodata)
+
+.rodata1							.rodata1
+ *(.rodata1)							 *(.rodata1)
+
+.eh_frame_hdr							.eh_frame_hdr
+ *(.eh_frame_hdr)						 *(.eh_frame_hdr)
+
+.eh_frame							.eh_frame
+ *(.eh_frame)							 *(.eh_frame)
+
+.gcc_except_table						.gcc_except_table
+ *(.gcc_except_table)						 *(.gcc_except_table)
+
+.gnu_extab							.gnu_extab
+ *(.gnu_extab*)							 *(.gnu_extab*)
+
+.exception_ranges						.exception_ranges
+ *(.exception_ranges)						 *(.exception_ranges)
+
+.eh_frame							.eh_frame
+ *(.eh_frame)							 *(.eh_frame)
+
+.gnu_extab							.gnu_extab
+ *(.gnu_extab)							 *(.gnu_extab)
+
+.gcc_except_table						.gcc_except_table
+ *(.gcc_except_table)						 *(.gcc_except_table)
+
+.exception_ranges						.exception_ranges
+ *(.exception_ranges)						 *(.exception_ranges)
+
+.tdata								.tdata
+ *(.tdata)							 *(.tdata)
+
+.tbss								.tbss
+ *(.tbss)							 *(.tbss)
+
+.jcr								.jcr
+ *(.jcr)							 *(.jcr)
+
+.dynamic							.dynamic
+ *(.dynamic)							 *(.dynamic)
+
+.got								.got
+ *(.got)							 *(.got)
+
+.got.plt							.got.plt
+ *(.got.plt)							 *(.got.plt)
+
+.data           0x0000000000000000        0xc		      |	.data           0x0000000000000000       0x10
+ *(.data)							 *(.data)
+ .data          0x0000000000000000        0x8 foo.o	      |	 .data          0x0000000000000000        0x4 bar.o
+                0x0000000000000000                foo	      |	                0x0000000000000000                bar
+ .data          0x0000000000000008        0x4 bar.o	      |	 *fill*         0x0000000000000004        0x4 
+                0x0000000000000008                bar	      |	 .data          0x0000000000000008        0x8 foo.o
+							      >	                0x0000000000000008                foo
+
+.data1								.data1
+ *(.data1)							 *(.data1)
+
+.bss            0x0000000000000000       0x3e		      |	.bss            0x0000000000000000       0x31
+ *(.bss)							 *(.bss)
+ .bss           0x0000000000000000       0x11 foo.o	      |	 .bss           0x0000000000000000       0x1e bar.o
+                0x0000000000000000                code	      |	                0x0000000000000000                dead
+ *fill*         0x0000000000000011        0xf 		      |	 *fill*         0x000000000000001e        0x2 
+ .bss           0x0000000000000020       0x1e bar.o	      |	 .bss           0x0000000000000020       0x11 foo.o
+                0x0000000000000020                dead	      |	                0x0000000000000020                code
+
+.lbss								.lbss
+ *(.lbss)							 *(.lbss)
+
+.lrodata							.lrodata
+ *(.lrodata)							 *(.lrodata)
+
+.ldata								.ldata
+ *(.ldata)							 *(.ldata)
+
+.stab								.stab
+ *(.stab)							 *(.stab)
+
+.stabstr							.stabstr
+ *(.stabstr)							 *(.stabstr)
+
+.stab.excl							.stab.excl
+ *(.stab.excl)							 *(.stab.excl)
+
+.stab.exclstr							.stab.exclstr
+ *(.stab.exclstr)						 *(.stab.exclstr)
+
+.stab.index							.stab.index
+ *(.stab.index)							 *(.stab.index)
+
+.stab.indexstr							.stab.indexstr
+ *(.stab.indexstr)						 *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x56			.comment        0x0000000000000000       0x56
+ *(.comment)							 *(.comment)
+ .comment       0x0000000000000000       0x2b foo.o	      |	 .comment       0x0000000000000000       0x2b bar.o
+ .comment       0x000000000000002b       0x2b bar.o	      |	 .comment       0x000000000000002b       0x2b foo.o
+
+.note.GNU-stack							.note.GNU-stack
+                0x0000000000000000        0x0			                0x0000000000000000        0x0
+ .note.GNU-stack						 .note.GNU-stack
+                0x0000000000000000        0x0 foo.o	      <
+ .note.GNU-stack					      <
+                0x0000000000000000        0x0 bar.o		                0x0000000000000000        0x0 bar.o
+							      >	 .note.GNU-stack
+							      >	                0x0000000000000000        0x0 foo.o
+
+.gnu.build.attributes						.gnu.build.attributes
+ *(.gnu.build.attributes)					 *(.gnu.build.attributes)
+
+.debug								.debug
+ *(.debug)							 *(.debug)
+
+.line								.line
+ *(.line)							 *(.line)
+
+.debug_srcinfo							.debug_srcinfo
+ *(.debug_srcinfo)						 *(.debug_srcinfo)
+
+.debug_sfnames							.debug_sfnames
+ *(.debug_sfnames)						 *(.debug_sfnames)
+
+.debug_aranges							.debug_aranges
+ *(.debug_aranges)						 *(.debug_aranges)
+
+.debug_pubnames							.debug_pubnames
+ *(.debug_pubnames)						 *(.debug_pubnames)
+
+.debug_info							.debug_info
+ *(.debug_info)							 *(.debug_info)
+
+.debug_abbrev							.debug_abbrev
+ *(.debug_abbrev)						 *(.debug_abbrev)
+
+.debug_line							.debug_line
+ *(.debug_line)							 *(.debug_line)
+
+.debug_frame							.debug_frame
+ *(.debug_frame)						 *(.debug_frame)
+
+.debug_str							.debug_str
+ *(.debug_str)							 *(.debug_str)
+
+.debug_loc							.debug_loc
+ *(.debug_loc)							 *(.debug_loc)
+
+.debug_macinfo							.debug_macinfo
+ *(.debug_macinfo)						 *(.debug_macinfo)
+
+.debug_weaknames						.debug_weaknames
+ *(.debug_weaknames)						 *(.debug_weaknames)
+
+.debug_funcnames						.debug_funcnames
+ *(.debug_funcnames)						 *(.debug_funcnames)
+
+.debug_typenames						.debug_typenames
+ *(.debug_typenames)						 *(.debug_typenames)
+
+.debug_varnames							.debug_varnames
+ *(.debug_varnames)						 *(.debug_varnames)
+
+.debug_pubtypes							.debug_pubtypes
+ *(.debug_pubtypes)						 *(.debug_pubtypes)
+
+.debug_ranges							.debug_ranges
+ *(.debug_ranges)						 *(.debug_ranges)
+
+.debug_macro							.debug_macro
+ *(.debug_macro)						 *(.debug_macro)
+
+.debug_addr							.debug_addr
+ *(.debug_addr)							 *(.debug_addr)
+
+.gnu.attributes							.gnu.attributes
+ *(.gnu.attributes)						 *(.gnu.attributes)
+OUTPUT(merge-1.o elf64-x86-64)				      |	OUTPUT(merge-2.o elf64-x86-64)

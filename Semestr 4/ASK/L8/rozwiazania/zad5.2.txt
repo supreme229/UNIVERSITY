@@ -1,0 +1,79 @@
+
+merge-2.o:     file format elf64-x86-64
+
+
+Disassembly of section .note.gnu.property:
+
+0000000000000000 <.note.gnu.property>:
+   0:	04 00                	add    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	10 00                	adc    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	05 00 00 00 47       	add    $0x47000000,%eax
+   d:	4e 55                	rex.WRX push %rbp
+   f:	00 02                	add    %al,(%rdx)
+  11:	00 00                	add    %al,(%rax)
+  13:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
+  17:	00 03                	add    %al,(%rbx)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 00                	add    %al,(%rax)
+  1d:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .data:
+
+0000000000000000 <bar>:
+   0:	2a 00                	sub    (%rax),%al
+   2:	00 00                	add    %al,(%rax)
+   4:	00 00                	add    %al,(%rax)
+	...
+
+0000000000000008 <foo>:
+   8:	13 00                	adc    (%rax),%eax
+   a:	00 00                	add    %al,(%rax)
+   c:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .bss:
+
+0000000000000000 <dead>:
+	...
+
+0000000000000020 <code>:
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%rdi)
+   3:	43 3a 20             	rex.XB cmp (%r8),%spl
+   6:	28 55 62             	sub    %dl,0x62(%rbp)
+   9:	75 6e                	jne    79 <code+0x59>
+   b:	74 75                	je     82 <code+0x62>
+   d:	20 39                	and    %bh,(%rcx)
+   f:	2e 33 2e             	xor    %cs:(%rsi),%ebp
+  12:	30 2d 31 37 75 62    	xor    %ch,0x62753731(%rip)        # 62753749 <code+0x62753729>
+  18:	75 6e                	jne    88 <code+0x68>
+  1a:	74 75                	je     91 <code+0x71>
+  1c:	31 7e 32             	xor    %edi,0x32(%rsi)
+  1f:	30 2e                	xor    %ch,(%rsi)
+  21:	30 34 29             	xor    %dh,(%rcx,%rbp,1)
+  24:	20 39                	and    %bh,(%rcx)
+  26:	2e 33 2e             	xor    %cs:(%rsi),%ebp
+  29:	30 00                	xor    %al,(%rax)
+  2b:	00 47 43             	add    %al,0x43(%rdi)
+  2e:	43 3a 20             	rex.XB cmp (%r8),%spl
+  31:	28 55 62             	sub    %dl,0x62(%rbp)
+  34:	75 6e                	jne    a4 <code+0x84>
+  36:	74 75                	je     ad <code+0x8d>
+  38:	20 39                	and    %bh,(%rcx)
+  3a:	2e 33 2e             	xor    %cs:(%rsi),%ebp
+  3d:	30 2d 31 37 75 62    	xor    %ch,0x62753731(%rip)        # 62753774 <code+0x62753754>
+  43:	75 6e                	jne    b3 <code+0x93>
+  45:	74 75                	je     bc <code+0x9c>
+  47:	31 7e 32             	xor    %edi,0x32(%rsi)
+  4a:	30 2e                	xor    %ch,(%rsi)
+  4c:	30 34 29             	xor    %dh,(%rcx,%rbp,1)
+  4f:	20 39                	and    %bh,(%rcx)
+  51:	2e 33 2e             	xor    %cs:(%rsi),%ebp
+  54:	30 00                	xor    %al,(%rax)

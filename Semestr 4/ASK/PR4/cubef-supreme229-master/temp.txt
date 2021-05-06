@@ -1,0 +1,16 @@
+        shl $23, %r9
+        or %rsi, %rax
+        or %r9, %rax
+
+        cmp $255, %r8
+        jl .L3
+        or mask1, %esi
+        mov %esi, %eax
+        ret
+.L3:    cmp $0, %r8 
+        jge .L4
+        or $0, %rsi
+        mov %rsi, %rax
+        ret
+.L4:     
+        ret 

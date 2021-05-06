@@ -9,7 +9,16 @@
  *
  * Imię i nazwisko, numer indeksu: Bartosz Janikowski, 315489
  */
+        .data
+        mask1: .quad 0x7F800000
+        mask2: .quad 0x0000000000800000
+        mask3: .quad 0x7FFFFF
+        mask4: .long 0x80000000
+        number1: .quad 1
+        number2: .quad 2
+        
 
+        
         .text
         .globl  cubef
         .type   cubef, @function
@@ -20,7 +29,7 @@
  
  1. Zapisanie do rejestrów osobno mantysy, wykładnika i znaku. Robię to wykorzystując maski i przesunięcia.
  
- 2. Z wykorzystaniem maski wstawiam 1 do mantysy (to jest 1,xxxx. 1 przed x-em)
+ 2. Z wykorzystaniem maski wstawiam dodatkowe 1 do mantysy (to jest 1,xxxx. czyli jakby część całkowita)
  
  3. Wyznaczenie wykładnika z wykorzystaniem biasu.
  
@@ -36,31 +45,35 @@
  
  9. I round
  
- 10. Złączenie rdx i rax by miec mantyse w rax 
+ 10. Złączenie rdx i rax by miec mantyse w rax
  
- 11. Dodanie zaokrąglenia i przesunięcie signa by mieć go na 32 bicie w rsi
+ 11. Dodanie ewentualnego zaokrąglenia #wynik predykatu to oczywiście
+ jak na wykładzie. Gdy round = 1 i guard = 1 lub round = 1 i sticky = 1
  
- 12. Wyznaczenie mantysy i ucięcie (1,) które dodałem w kroku 2.
+ 12. Ucięcie (1,) które dodałem w kroku 2.
  
- 13. Sprawdzenie wszystkich warunków dla +- inf i +-0
- 
- 14. Zwrócenie wyniku normalnego
- */
+ 13. Generalnie jest to krok wyznaczający naszą liczbę, ale bez znaku
+ znak robię niżej a to zostało wymuszone przez podejście jakie miałem do sprawdzenia
+ infów. Gdybym tu już ustawił znak to wywali mi się sprawdzenie -inf. Bo
+ korzystam tam z maski, która ma 0 na znaku i sobie go zmieniam tam na miejscu. 
+ Zauważmy, że jak zmieniam tam to odrazu też zmieniam znak gdy inf nie zachodzi, więc
+ wszystko działa poprawnie. 
+
+ 14. Sprawdzenie wszystkich warunków dla +- inf i +-0
+
+ 15. Zwrócenie wyniku :)
+*/
 
 cubef:
-        mov %rdi, %rdi
         mov %edi, %esi
         mov %edi, %r9d
         mov %edi, %eax
-        shr $31, %rsi # w rsi znak
-        mov $0x7F800000, %r8
-        and %r8, %r9 # w r9 exponent
+        and mask4, %rsi # w rsi znak
+        and mask1, %r9 # w r9 exponent
         shr $23, %r9
-        mov $0x7FFFFF, %r8
-        and %r8, %rax # w rax mantysa
+        and mask3, %rax # w rax mantysa
         # ---------------> krok 1
-        mov $0x0000000000800000, %r8
-        or %r8, %rax
+        or mask2, %rax
         # ---------------> krok 2
         sub $127, %r9
         imul $3, %r9
@@ -72,71 +85,57 @@ cubef:
         # ---------------> krok 4
         mov $0, %rcx
         mov %rdx, %r8
-        shr $6, %r8
-        and $1, %r8
-        cmp $1, %r8
-        jne .L1
-        mov $1, %rcx
-.L1:    mov %rdx, %r8
-        shr $7, %r8
-        and $1, %r8
-        cmp $1, %r8
-        jne .L2
-        mov $2, %rcx
+        and $0x40, %r8
+        cmp $0x40, %r8
+        cmove number1, %rcx
+        mov %rdx, %r8
+        and $0x80, %r8
+        cmp $0x80, %r8
+        cmove number2, %rcx
         # --------------> krok 5
-.L2:     add %rcx, %r9
+        add %rcx, %r9
         # -------------> krok 6
         mov %rax, %r8
-        mov %rcx, %rdi
+        mov %rcx, %r10
         mov $19, %rcx
-        sub %rdi, %rcx
+        sub %r10, %rcx
         shl %cl, %r8
-        mov %rdi, %rcx 
+        mov %r10, %rcx 
         cmp $0, %r8
         mov $0, %r8
         setnz %r8b # sticky
         # --------------> krok 7
-        mov %rax, %rdi
-        shr $46, %rdi
-        shr %cl, %rdi
-        and $1, %rdi # guard
+        mov %rax, %r10
+        shr $46, %r10
+        shr %cl, %r10
+        and $1, %r10 # guard
         # --------------> krok 8
-        or %rdi, %r8
-        mov %rax, %rdi
-        shr $45, %rdi
-        shr %cl, %rdi
-        and $1, %rdi # round(???)
+        or %r10, %r8
+        mov %rax, %r10
+        shr $45, %r10
+        shr %cl, %r10
+        and $1, %r10 # round
         # ---------------> krok 9
-        and %r8, %rdi # wynik predykatu
+        and %r8, %r10 # wynik predykatu
         shr $46, %rax
         shr %cl, %rax 
         shl $18, %rdx  
         shr %cl, %rdx
         or %rdx, %rax
         # ---------------> krok 10
-        shl $31, %esi
-        add %rdi, %rax
+        add %r10, %rax
         # ---------------> krok 11
-        mov $0x7FFFFF, %r8
-        and %r8, %rax
+        and mask3, %rax
         mov %r9, %r8 
         # ---------------> krok 12
-        cmp $255, %r8
-        jl .L3
-        mov $0x7F800000, %ecx
-        or %ecx, %esi
-        mov %esi, %eax
-        ret
-.L3:    cmp $0, %r8 # popraw
-        jge .L4
-        or $0, %rsi
-        mov %rsi, %rax
-        ret
-.L4:     
-        # -----------------> krok 13
         shl $23, %r9
-        or %rsi, %rax
         or %r9, %rax
+        # ---------------> krok 13
+        cmp $255, %r8
+        cmovge mask1, %eax
+        or %esi, %eax
+        cmp $0, %r8 
+        cmovl %esi, %eax
         # -----------------> krok 14
         ret 
 

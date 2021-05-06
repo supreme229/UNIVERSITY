@@ -1,0 +1,26 @@
+0000000000001590 <phase_5>:
+    1590:	53                   	push   %rbx
+    1591:	48 89 fb             	mov    %rdi,%rbx
+    1594:	e8 72 02 00 00       	callq  180b <string_length>
+    1599:	83 f8 06             	cmp    $0x6,%eax
+    159c:	75 2c                	jne    15ca <phase_5+0x3a>
+    # na wejściu mamy stringa mającego długość 6
+    159e:	48 89 d8             	mov    %rbx,%rax
+    # w rbx jego długość
+    15a1:	48 8d 7b 06          	lea    0x6(%rbx),%rdi
+    15a5:	b9 00 00 00 00       	mov    $0x0,%ecx
+    15aa:	48 8d 35 2f 1c 00 00 	lea    0x1c2f(%rip),%rsi        # 31e0 <array.3195>
+    15b1:	0f b6 10             	movzbl (%rax),%edx
+    15b4:	83 e2 0f             	and    $0xf,%edx
+    15b7:	03 0c 96             	add    (%rsi,%rdx,4),%ecx
+    15ba:	48 83 c0 01          	add    $0x1,%rax
+    15be:	48 39 f8             	cmp    %rdi,%rax
+    15c1:	75 ee                	jne    15b1 <phase_5+0x21>
+    15c3:	83 f9 1d             	cmp    $0x1d,%ecx
+    15c6:	75 09                	jne    15d1 <phase_5+0x41>
+    15c8:	5b                   	pop    %rbx
+    15c9:	c3                   	retq   
+    15ca:	e8 65 03 00 00       	callq  1934 <explode_bomb>
+    15cf:	eb cd                	jmp    159e <phase_5+0xe>
+    15d1:	e8 5e 03 00 00       	callq  1934 <explode_bomb>
+    15d6:	eb f0                	jmp    15c8 <phase_5+0x38>
